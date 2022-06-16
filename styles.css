@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("./fonts/Lato/Lato-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 6px 12px;
+    border: 1.5px solid rgb(37, 37, 37);
+    border-radius: 20px;
+    position: relative;
+    bottom: 70px;
+}
+
+.main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.main .title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+    width: 50%;
+}
+
+.main form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main form input {
+    background: #F7F7F7;
+    border-radius: 10px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: black;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+.main form button {
+    background: linear-gradient(92.48deg, #00FF94 8.14%, rgba(6, 6, 6, 0) 207.68%);
+    border-radius: 140px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    padding: 10px 80px;
+    display: flex;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px 1px rgba(119, 119, 119, 0.301);
+}
+
+.main form input::placeholder {
+    opacity: 0.6;
+}
+
+@media (max-width: 991px) {
+    a {
+        bottom: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    a {
+        bottom: 28px;
+    }
+
+    .main .title {
+        font-size: 20px;
+    }
+
+    .main form  {
+        align-items: center;
+    }
+    .main form button {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .main {
+        flex-direction: column;
+        margin-bottom: 30px;
+        margin-top: 70px;
+    }
+
+    .main .title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a {
+        position: static;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .main form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 414px) {
+    .main form input {
+        margin-bottom: 10px;
+    }
+    .main form button {
+        margin-top: 30px;
+    }
+}

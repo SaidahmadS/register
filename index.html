@@ -8,7 +8,36 @@
     <title>register</title>
 </head>
 <body>
-    
+    <div class="container wrapper">
+        <div class="main">
+            <h3 class="title">
+             Mahsulotga buyurtma berish uchun ismingiz va telefon raqamingizni qoldiring. Operatorlarimiz 24 soat ichida siz bilan aloqaga chiqishadi.
+            </h3>
+            <form action="https://sheetdb.io/api/v1/zhxcmq70fpgut" id="sheetdb-form" method="post">
+             <input type="text" name="data[ism]" placeholder="Ism-Familya">
+             <input type="text" name="data[telefon]" placeholder="Telefon raqam">
+             <button type="submit">Yuborish</button>
+            </form>
+        </div>
+        <a href="tel:+998951808811">+998951808811</a>
+    </div>
+
+
+   <script>
+    let form = document.getElementById('sheetdb-form');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(document.getElementById('sheetdb-form')),
+      }).then(
+        response => response.json()
+      ).then(() => {
+        window.location.href = "https://tavsiya.com/"
+      })
+    })
+  </script>
 
 </body>
 </html>
